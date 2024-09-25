@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container img {
+  max-width: 100px;
+}
+.container {
+  position: relative;
+  padding: 5%;
+  background-color: white;
+  aspect-ratio: 1/1;
+  width: 310px;
+  border-radius: 50%;
+  text-align: center;
+  color: #0b253dff;
+}
+.container .rim {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  z-index: -1;
+  width: 130%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: transform 1.5s ease-out, opacity 2s ease-out;
+}
+.container .rim:first-of-type {
+  background-image: linear-gradient(to right, #59c173, #a17fe0, #5d26c1);
+}
+.container .rim:nth-of-type(2) {
+  background-image: linear-gradient(to right, #4a8192ff, #161834ff, #d53129ff);
+}
+
+.container .number-container {
+  font-size: 3em;
+  font-weight: bold;
+}
+.container .label {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.container .indicator {
+  display: inline-block;
+  width: 12px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9ff;
+  background-color: #d9d9d9ff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.container .indicator.active {
+  background-color: #3166abff;
+}
