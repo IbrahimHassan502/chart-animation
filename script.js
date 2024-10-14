@@ -67,6 +67,7 @@ function changeNum(i) {
       const changeBy = currentNum / newNum / 10;
       currentNum -= 100;
     } else {
+      currentNum = newNum;
       clearInterval(numInterval);
     }
     numberContainer.textContent = currentNum;
